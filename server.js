@@ -134,7 +134,7 @@ app.get('/health', (req, res) => {
 });
 
 // Main content generation endpoint
-app.post('/api/generate-content', async (req, res) => {
+app.get('/api/generate-content', async (req, res) => {
   const startTime = Date.now();
   
   try {
@@ -278,7 +278,7 @@ app.post('/api/generate-content', async (req, res) => {
 });
 
 // Test endpoint for checking AI providers
-app.post('/api/test-ai', async (req, res) => {
+app.get('/api/test-ai', async (req, res) => {
   try {
     const results = {
       claude: null,
